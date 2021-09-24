@@ -25,7 +25,7 @@ func (es ExampleSet) Maintain(){
 }
 
 // AddExample 人脸实例集合：添加实例
-func (es ExampleSet)AddExample(example Example)  {
+func (es ExampleSet) AddExample (example Example)  {
 	es.examples[es.length] = example
 	es.indexes[es.length] = es.length
 	es.length++
@@ -45,7 +45,7 @@ func (es ExampleSet) GetExample (index int)Example{
 }
 
 // GetRandomExample 人脸实例集合：随机取得一个实例
-func (es *ExampleSet)GetRandomExample()(Example){
+func (es *ExampleSet) GetRandomExample() (Example){
 	if es.length == 0 {
 		return Example{}
 	}
