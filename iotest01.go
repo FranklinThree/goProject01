@@ -6,7 +6,7 @@ import (
 )
 func main() {
 	buf := make([]byte, 1024)
-	f, _ := os.Open("/etc/passwd")
+	f, _ := os.Open("1")
 	defer f.Close()
 	for {
 		n, _ := f.Read(buf)
