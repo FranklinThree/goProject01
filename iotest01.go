@@ -1,7 +1,6 @@
-package goProject01
+package main
 
 import (
-	"fmt"
 	"os"
 )
 func main() {
@@ -13,5 +12,4 @@ func main() {
 		if n == 0 { break }
 		os.Stdout.Write(buf[:n])
 	}
-	fmt.Println(buf)
 }

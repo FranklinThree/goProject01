@@ -1,4 +1,4 @@
-package goProject01
+package main
 
 import "rsc.io/quote"
 
