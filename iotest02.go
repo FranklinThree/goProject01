@@ -18,7 +18,6 @@ func main(){
 			break
 		}
 			writer.Write(buffer[:n])
-			os.Stdout.Write(buffer[:n])
 
 	}
 
