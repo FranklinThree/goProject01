@@ -33,10 +33,11 @@ func (es *ExampleSet)AddExample(example Example)  {
 
 // GetExample 人脸实例集合：取得指定实例
 func (es *ExampleSet)GetExample(index int)Example{
-
+	//异常：人脸实例集合中无实例
 	if es.length == 0 {
 		return Example{}
 	}
+	//异常：下标越界
 	if index >= es.length || index < 0{
 		return Example{}
 	}
