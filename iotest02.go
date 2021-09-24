@@ -1,7 +1,6 @@
-package main
+package goProject01
 
 import (
-	"fmt"
 	"os"
 )
 
@@ -13,7 +12,6 @@ func Copy(source string,target string)(info int){
 	var buffer = make([]byte,1024)
 	for true{
 		n,_ := reader.Read(buffer)
-		fmt.Println("start!")
 		if n == 0 {
 			break
 		}

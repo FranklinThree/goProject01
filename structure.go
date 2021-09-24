@@ -1,4 +1,4 @@
-package main
+package goProject01
 
 import (
 	"math/rand"
@@ -32,22 +32,25 @@ func (es ExampleSet) AddExample (example Example)  {
 }
 
 // GetExample 人脸实例集合：取得指定实例
-func (es ExampleSet) GetExample (index int)Example{
-	//异常：人脸实例集合中无实例
+func (es ExampleSet) GetExample(index int) (e Example,info int){
+	//异常：人脸实例集合为空
 	if es.length == 0 {
-		return Example{}
+		return Example{},1
 	}
 	//异常：下标越界
 	if index >= es.length || index < 0{
-		return Example{}
+		return Example{},2
 	}
-	return es.examples[index]
+	return es.examples[index],0
 }
 
 // GetRandomExample 人脸实例集合：随机取得一个实例
-func (es *ExampleSet) GetRandomExample() (Example){
+func (es ExampleSet) GetRandomExample() (e Example,info int){
+	//异常：人脸实例集合为空
 	if es.length == 0 {
-		return Example{}
+		return Example{},1
 	}
-	return  es.GetExample(rand.Intn(es.length))
+	e,_ = es.GetExample(rand.Intn(es.length))
+	info = 0
+	return
 }

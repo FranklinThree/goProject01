@@ -1,4 +1,4 @@
-package main
+package goProject01
 
 import (
 	"testing"
